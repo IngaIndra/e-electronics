@@ -1,5 +1,11 @@
-function App() {
-  return <h1>Hello react app</h1>;
-}
+// import Signup from "./Pages/SignUp";
 
-export default App;
+import SignUp from "./components/Signup/SignUp";
+
+export default function App() {
+  return (
+    <>
+      <SignUp />
+    </>
+  );
+}

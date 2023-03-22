@@ -1,8 +1,3 @@
-require("@babel/register")({
-  ignore: [/node_modules/],
-  extensions: [".js", ".json"],
-});
-
 import express, { json } from "express";
 import cors from "cors";
 import * as mongooseConfig from "./configs/mongoose-config";
