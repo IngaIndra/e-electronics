@@ -10,6 +10,14 @@ export const User = {
     type: String,
     unique: true,
   },
+  role: {
+    type: mongoose.Types.ObjectId,
+    ref: "UserRole",
+  },
+  roles: {
+    type: [mongoose.Types.ObjectId],
+    ref: "UserRole",
+  },
 };
 
 export const userSchema = new mongoose.Schema(User, { timestamps: true });

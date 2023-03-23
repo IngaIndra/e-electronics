@@ -24,7 +24,7 @@ usersRouter.post("/", async (req, res) => {
 });
 
 usersRouter.put("/:id", async (req, res) => {
-  const { id } = req.params.id;
+  const { id } = req.params;
   const user = req.body;
   res.json(await updateUser(id, user));
 });
