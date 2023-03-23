@@ -1,4 +1,5 @@
 import express from "express";
+import verifyToken from "../middleware/verifyToken";
 import {
   createUser,
   deleteUser,
@@ -9,7 +10,8 @@ import {
 
 const usersRouter = express.Router();
 
-usersRouter.get("/", async (req, res) => {
+usersRouter.get("/", verifyToken, async (req, res) => {
+  console.log(req.headers);
   res.json(await getUsers());
 });
 

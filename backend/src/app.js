@@ -15,7 +15,7 @@ app.get("/api/", (req, res) => {
   res.json("Hello world!");
 });
 
-app.use("/api/users/", usersRouter);
+app.use("/api/users", usersRouter);
 app.use("/api/userRoles", userRolesRouter);
 
 app.post("/api/register", async (req, res) => {

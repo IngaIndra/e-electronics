@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "rimraf dist && babel src --out-dir dist  --copy-files",
-    "start:prod": "node dist/app.js",
+    "start:dev": "node dist/app.js",
     "start": "nodemon --exec babel-node src/app.js"
   },
   "keywords": [],
