@@ -10,6 +10,10 @@ import {
 
 const usersRouter = express.Router();
 
+usersRouter.get("/me", verifyToken, (req, res) => {
+  return res.json(req.user);
+});
+
 usersRouter.get("/", verifyToken, async (req, res) => {
   console.log(req.headers);
   res.json(await getUsers());
