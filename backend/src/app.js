@@ -29,7 +29,7 @@ app.post("/api/register", async (req, res) => {
   console.log("user:", user);
   return res
     .status(200)
-    .json({ success: true, message: "Register successful" });
+    .json({ success: true, message: "Registered successful" });
 });
 
 app.post("/api/login", async (req, res) => {
