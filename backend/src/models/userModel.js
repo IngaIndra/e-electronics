@@ -9,6 +9,7 @@ export const User = {
   email: {
     type: String,
     unique: true,
+    required: true,
   },
   role: {
     type: mongoose.Types.ObjectId,
@@ -18,6 +19,8 @@ export const User = {
     type: [mongoose.Types.ObjectId],
     ref: "UserRole",
   },
+
+  password: String,
 };
 
 export const userSchema = new mongoose.Schema(User, { timestamps: true });

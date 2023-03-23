@@ -38,7 +38,7 @@ export default function SignUp() {
                     <div className="d-grid">
                       <Button
                         style={{ backgroundColor: "#7f56d9" }}
-                        className=" p-2 rounded-3"
+                        className="p-2 rounded-3 purple-button"
                         type="submit"
                       >
                         Create Account
