@@ -38,6 +38,13 @@ app.post("/api/login", async (req, res) => {
   res.status(response.status).json(response);
 });
 
+app.post("/files", upload.single("image"), async (req, res) => {
+  const uploadedFile = await cloudinary.v2.uploader.upload(req.file.path);
+  res.json(uploadedFile);
+});
+
+app.use("/uploads", express.static("uploads"));
+
 app.listen(PORT, () => {
   console.log("http://localhost:" + PORT);
 });
