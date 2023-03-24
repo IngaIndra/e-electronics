@@ -1,6 +1,5 @@
 import express, { json } from "express";
 import cors from "cors";
-import * as mongooseConfig from "./configs/mongoose-config";
 import usersRouter from "./routers/usersRouter";
 import userRolesRouter from "./routers/userRolesRouter";
 import { loginUser, registerUser } from "./services/usersService";
